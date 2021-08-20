@@ -1,0 +1,7 @@
+
+[project]
+name = "bitcoin.clar"
+
+[contracts]
+
+[notebooks]
