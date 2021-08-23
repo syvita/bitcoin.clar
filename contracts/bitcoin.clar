@@ -876,6 +876,7 @@
                 )                
             )
             (yCoordIsEven 
+                ;; clarity doesn't like this if, need to fix
                 (if (is-eq firstByte 0x02)
                     true
                     (if (is-eq firstByte 0x03)
@@ -886,6 +887,7 @@
             )
             ;; get yCoord from pubKey by solving y^2 = x^3 + 7
             (yCoord 
+                ;; we need to convert the buff to int before we can do the below
                 (if yCoordIsEven 
                     (sqrti (+ (pow xCoord 3) 7)) ;; returns positive y coord
                     (* (sqrti (+ (pow xCoord 3) 7)) -1) ;; returns negative y coord
