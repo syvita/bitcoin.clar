@@ -1,7 +1,8 @@
-
 [project]
 name = "bitcoin.clar"
 
-[contracts]
+[contracts.bitcoin]
+path = "contracts/bitcoin.clar"
+depends_on = []
 
 [notebooks]
